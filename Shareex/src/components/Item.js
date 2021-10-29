@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, TouchableOpacity, Image, Text } from 'react-native'
+import { View, TouchableOpacity, Image, Text, Linking } from 'react-native'
 
 export default function Item({uri, width, height}) {
     return (
@@ -32,7 +32,9 @@ export default function Item({uri, width, height}) {
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: '#EAEAEA'
-          }}>
+          }}
+            onPress={ ()=>{ Linking.openURL('https://shobee-source.vercel.app/')}}
+          >
             <Text style={{}}>MUA NGAY</Text>
           </TouchableOpacity>
       </View>

@@ -62,7 +62,6 @@ export default function Home() {
 				<View style={{ 
 					width: windowWidth - 16,
 					height: 141,
-					backgroundColor: 'red',
 					borderRadius: 10,
 					marginTop: 8,
 					overflow: 'hidden'

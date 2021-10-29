@@ -1,6 +1,7 @@
-import React from 'react'
-import { Text, View, StyleSheet, Image, ScrollView } from 'react-native'
+import React, { useRef } from "react";
+import { Text, View, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
 import { windowWidth, windowHeight } from '../constants';
+import RBSheet from "react-native-raw-bottom-sheet";
 
 export default function Donation() {
     const tempData = [
@@ -9,13 +10,27 @@ export default function Donation() {
         {id: 3, imgUri: 'https://nld.mediacdn.vn/2016/tincd-dao-1480774815358.jpg', logoUri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbr--X4Cb30Ef9billRU7cTDz8hGFE_BCizipUuyOfLTad5ycmoYXtj8q1auGld9tYc4s&usqp=CAU', name: 'Hội người Khuyết tật', people: '173', times: '230'},
     ]
 
+    const donator = [
+        {id: 1, name: 'Sơn Hà', amount: "10.000"},
+        {id: 2, name: 'Hoàng Tiến Thịnh', amount: "12.200"},
+        {id: 4, name: 'Hoàng Mia', amount: "5.500"},
+        {id: 3, name: 'Luân', amount: "7.300"},
+        {id: 5, name: 'Nguyễn Hoàng Quang phú', amount: "2.000"},
+        {id: 6, name: 'Hồ Thanh trúc', amount: "4.000"}
+    ]
+
+    const refRBSheet = useRef();
+
     return (
         <ScrollView style={{ width: windowWidth, height: windowHeight}}>
             <View style={{alignItems: 'center'}}>
-                <View style={{
-                    width: windowWidth - 16,
-                    marginTop: 24,
-                }}>
+                <TouchableOpacity 
+                    style={{
+                        width: windowWidth - 16,
+                        marginTop: 24,
+                    }}
+                    onPress={() => refRBSheet.current.open()}
+                >
                     <Text style={{
                         fontSize: 18,
                         lineHeight: 28
@@ -38,7 +53,44 @@ export default function Donation() {
                             <Text style={styles.count}>200 người quyên góp - 400 lượt quyên góp</Text>
                         </View>
                     </View>
-                </View>
+                </TouchableOpacity>
+
+                <RBSheet
+                    ref={refRBSheet}
+                    closeOnDragDown={true}
+                    closeOnPressMask={true}
+                    height={windowHeight/3*2.5}
+                    customStyles={{
+                        draggableIcon: {
+                            backgroundColor: "#000"
+                        }
+                    }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 8}}>
+                            <Image 
+                                style={{ width: 36, height: 36, borderRadius: 10, marginLeft: 8}}
+                                source={{ uri: 'https://inbienquangcao.vn/wp-content/uploads/2021/01/Logo-ho%CC%A3%CC%82i-chu%CC%9B%CC%83-tha%CC%A3%CC%82p-%C4%91o%CC%89-vector.jpg' }} />
+                            <View style={{ display: 'flex', justifyContent: 'center'}}>
+                                <Text style={styles.place}>Hội Chữ Thập Đỏ</Text>
+                                <Text style={styles.count}>200 người quyên góp - 400 lượt quyên góp</Text>
+                            </View>
+                            
+                        </View>
+
+                        <ScrollView style={{width: windowWidth}}>
+                            <View style={{ alignItems: "center" }}>
+                                <View style={{height: 20}}/>
+
+                                {donator.map(donor => (
+                                    <View key={donor.id} style={{width: windowWidth  - 16 , height: 50, borderRadius: 10, flexDirection: 'row', justifyContent: "space-between", alignItems: "center"}}>
+                                        <Text style={{ marginLeft: 20}}>{donor.name}</Text>
+                                        <Text   style={{ marginRight: 20, color: "grey"}}>{donor.amount} VNĐ</Text>
+                                    </View>
+                                ))}
+                                
+
+                            </View>
+                        </ScrollView>
+                    </RBSheet>
 
                 <View style={{
                     width: windowWidth - 16,
