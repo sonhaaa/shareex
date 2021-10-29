@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Cart | Shobee</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Shobee</a>
+            </div>
+            <div class="cart">
+                <a href="#">
+                    <img src="img/shopping-bag.png" alt="Shopping bag">
+                </a>
+                <div id="cart__quantity">3</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainwrapper cartwrapper">
+        <div class="container">
+            <div class="title">
+                Giỏ hàng
+            </div>
+            <div class="item__list">
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/gaubong.jpg" alt="">
+                    </div>
+                    <div class="item__content">
+                        <div class="item__content--title">
+                            Gấu bông to
+                        </div>
+                        <div class="item__content--quantity">
+                            <button class="subtract" type="button">-</button>
+                            1
+                            <button class="plus" type="button">+</button>
+                        </div>
+                        <div class="item__content--price">
+                            20.000 VND
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/gaubong2.jpg" alt="">
+                    </div>
+                    <div class="item__content">
+                        <div class="item__content--title">
+                            Gấu bông nhỏ
+                        </div>
+                        <div class="item__content--quantity">
+                            <button class="subtract" type="button">-</button>
+                            1
+                            <button class="plus" type="button">+</button>
+                        </div>
+                        <div class="item__content--price">
+                            10.000 VND
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="img/hoodie.jpg" alt="">
+                    </div>
+                    <div class="item__content">
+                        <div class="item__content--title">
+                            Áo hoodie
+                        </div>
+                        <div class="item__content--quantity">
+                            <button class="subtract" type="button">-</button>
+                            1
+                            <button class="plus" type="button">+</button>
+                        </div>
+                        <div class="item__content--price">
+                            299.000 VND
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+    <footer class="cartfooter">
+        <div class="container">
+            <div class="total">
+                Tổng:
+                <span id="total__price"></span>
+            </div>
+            <div class="pay" onclick="alertSweet()">
+                <a href="#">Thanh toán</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+
+
+</body>
+
+</html>

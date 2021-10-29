@@ -1,0 +1,55 @@
+/* FONT FACE - font-display: fallback; */
+@font-face {
+    font-family: 'FVHShopee';
+    src: url('../fonts/FVHShopeeText-Bold.woff2') format('woff2'),
+        url('../fonts/FVHShopeeText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'black';
+    src: url('../fonts/Shopee2021-Black.woff2') format('woff2'),
+        url('../fonts/Shopee2021-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'b';
+    src: url('../fonts/Shopee2021-Bold.woff2') format('woff2'),
+        url('../fonts/Shopee2021-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'eb';
+    src: url('../fonts/Shopee2021-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Shopee2021-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'l';
+    src: url('../fonts/Shopee2021-Light.woff2') format('woff2'),
+        url('../fonts/Shopee2021-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'r';
+    src: url('../fonts/Shopee2021-Regular.woff2') format('woff2'),
+        url('../fonts/Shopee2021-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
